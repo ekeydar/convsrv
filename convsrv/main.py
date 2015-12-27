@@ -17,6 +17,7 @@ except ImportError:
 
 app = Flask(__name__)
 
+
 @app.route('/')
 def home():
     return 'HELLO'
