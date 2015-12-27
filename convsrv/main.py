@@ -3,6 +3,7 @@ import tempfile
 
 from PIL import Image
 from flask import Flask, Response, request, send_file
+import logging
 
 DEBUG = False
 KEY = None
@@ -42,7 +43,12 @@ def conv(from_fname, to_fname):
     img.save(to_fname)
 
 
+app.logger.setLevel(logging.DEBUG)
+app.logger.addHandler(logging.StreamHandler())
+
+app.logger.info('DEBUG = %s',DEBUG)
+app.logger.info('KEY = %s',KEY)
+
 if __name__ == '__main__':
-    app.logger.info('DEBUG = %s',DEBUG)
-    app.logger.info('KEY = %s',KEY)
+
     app.run(debug=DEBUG)
