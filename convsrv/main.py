@@ -43,4 +43,6 @@ def conv(from_fname, to_fname):
 
 
 if __name__ == '__main__':
+    app.logger.info('DEBUG = %s',DEBUG)
+    app.logger.info('KEY = %s',KEY)
     app.run(debug=DEBUG)
