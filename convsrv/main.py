@@ -7,6 +7,8 @@ import logging
 
 DEBUG = False
 KEY = None
+HOST=None
+PORT=None
 
 try:
     from local_settings import *
@@ -50,5 +52,4 @@ app.logger.info('DEBUG = %s',DEBUG)
 app.logger.info('KEY = %s',KEY)
 
 if __name__ == '__main__':
-
-    app.run(debug=DEBUG)
+    app.run(debug=DEBUG, host=HOST, port=PORT)
