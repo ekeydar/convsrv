@@ -1,0 +1,4 @@
+Flask==0.10.1
+Pillow==3.0.0
+ipython==4.0.1
+pyreadline==2.1
