@@ -17,6 +17,10 @@ except ImportError:
 
 app = Flask(__name__)
 
+@app.route('/')
+def home():
+    return 'HELLO'
+
 
 @app.route('/api/conv/', methods=['POST'])
 def api_conv():
