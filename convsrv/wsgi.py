@@ -1,1 +1,2 @@
-from main import app as application
+from . import main
+application = main.app
